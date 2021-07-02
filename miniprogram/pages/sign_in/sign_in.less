@@ -1,0 +1,131 @@
+.sign_container {
+  background-color: #4dae77;
+
+  .banner_wrap {
+    position: relative;
+
+    .banner_image {
+      width: 100%;
+    }
+
+    .sign_btn_wrap {
+      position: absolute;
+      width: 320rpx;
+      left: 50%;
+      bottom: 50rpx;
+      transform: translateX(-50%);
+
+      .sign_btn_image {
+        width: 100%;
+      }
+
+      .sign_btn_text {
+        position: absolute;
+        white-space: nowrap;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        color: #926623;
+      }
+    }
+  }
+
+  .calendar_wrap {
+    position: relative;
+    .calendar_bg{
+      width: 100%;
+    }
+    .calendar_container {
+      position: absolute;
+      width: 100%;
+      top: 60rpx;
+      left: 0;
+
+      .calendar_header {
+        position: relative;
+        text-align: center;
+        color: #ee5c57;
+        width: 100%;
+
+        .month_btn {
+          position: absolute;
+          left: 40rpx;
+          top: 0;
+          height: 60rpx;
+          width: 130rpx;
+          text-align: center;
+          line-height: 60rpx;
+          background-color: #f6d2a3;
+          font-size: 26rpx;
+          color: #7e4410;
+          border-radius: 0 90rpx 90rpx 0;
+        }
+      }
+
+      .calendar_content {
+        width: 90%;
+        margin: 20rpx auto;
+        font-size: 24rpx;
+        color: #2d2d2d;
+        overflow: hidden;
+        .week_day_content {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          grid-row-gap: 20rpx;
+
+          .day_item {
+            margin: auto;
+            width: 70rpx;
+            height: 70rpx;
+            line-height: 70rpx;
+            text-align: center;
+            position: relative;
+          }
+
+          .not_current_month {
+            color: #ccc;
+          }
+
+          .is_now_date {
+            background: #f82;
+            border-radius: 50%;
+            color: #fff;
+          }
+
+          .signed:before {
+            content: "";
+            position: absolute;
+            bottom: -10rpx;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14rpx;
+            height: 14rpx;
+            background: #f23a3d;
+            border-radius: 50%;
+          }
+          .repair_signed:after {
+            content: "补";
+            position: absolute;
+            bottom: -14rpx;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 26rpx;
+            height: 26rpx;
+            line-height: 26rpx;
+            text-align: center;
+            background: #5cf23a;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 18rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .recommend_wrap{
+    .split_line{
+      width: 100%;
+    }
+  }
+}

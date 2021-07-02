@@ -1,0 +1,59 @@
+<!-- <view class="headers_wrapper" wx:if="{{signtype=='1'}}">
+    <view class="for_headerleft"><image src="../../images/calendar1.png" ></image></view>
+    <view class="for_headerright">
+        <view class="for_headerright_list">今日未签到</view>
+        <view class="for_headerright_list1">已连续签到<span>{{seriesCount}}</span>天 </view>
+        <view class="for_headerright_list2">再连续签到<span>{{series_gos}}</span>天即可获得更多奖励</view>
+    </view>
+</view> -->
+<!-- <view class="headers_wrapper" wx:if="{{signtype=='2'}}">
+    <view class="for_headerleft"><image src="../../images/calendar2.png" ></image></view>
+    <view class="for_headerright">
+        <view class="for_headerright_list">今日已签到</view>
+        <view class="for_headerright_list1">已连续签到<span>{{seriesCount}}</span>天 </view>
+        <view class="for_headerright_list2">再连续签到<span>{{series_gos}}</span>天即可获得更多奖励</view>
+    </view>
+</view> -->
+<view class="sign_container">
+  <view class="banner_wrap">
+    <image class="banner_image" src="../../images/qiandaobg.png"></image>
+    <view class="sign_btn_wrap">
+      <image class="sign_btn_image" mode="widthFix" src="../../images/signedBtn.png"></image>
+      <view class="sign_btn_text">立即签到</view>
+    </view>
+  </view>
+  <view class="calendar_wrap">
+    <image class="calendar_bg" mode="widthFix" src="../../images/calendar_bg.png" alt=""></image>
+    <view class="calendar_container">
+      <view class="calendar_header">
+        <text>签到日历</text>
+        <view class="month_btn">
+          <text>{{showMonth}}</text>
+          月
+        </view>
+      </view>
+      <view class="calendar_content">
+        <view class="week_day_content">
+          <view class="day_item">日</view>
+          <view class="day_item">一</view>
+          <view class="day_item">二</view>
+          <view class="day_item">三</view>
+          <view class="day_item">四</view>
+          <view class="day_item">五</view>
+          <view class="day_item">六</view>
+        </view>
+        <view class="week_day_content">
+          <view
+            class="day_item {{item.notCurrentMonth?'not_current_month':''}} {{item.signed?'signed':''}} {{item.isNowDate?'is_now_date':''}} {{item.repairSigned?'repair_signed':''}}"
+            wx:for="{{dayList}}"
+            wx:key="item"
+          >{{item.day}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="recommend_wrap">
+    <image class="split_line" mode="widthFix" src="../../images/recommend.png" alt=""></image>
+  </view>
+</view>
