@@ -12,7 +12,7 @@
       position: absolute;
       width: 320rpx;
       left: 50%;
-      bottom: 50rpx;
+      bottom: 10%;
       transform: translateX(-50%);
 
       .sign_btn_image {
@@ -26,6 +26,48 @@
         top: 40%;
         transform: translate(-50%, -50%);
         color: #926623;
+        &:active,&:hover{
+          background-color: transparent;
+        }
+      }
+    }
+    .score_ball{
+      position: absolute;
+      left: 50%;
+      bottom: 20%;
+      transform: translate(-50%, -50%);
+      width: 160rpx;
+      border-radius: 50%;
+      height: 160rpx;
+      background: radial-gradient(transparent 65rpx, rgba(12, 184, 123, 0.8));
+      text-align: center;
+      color: #0c8b53;
+      .score_ball_number{
+        margin-top: 20%;
+        font-size: 40rpx;
+        font-weight: bold;
+      }
+      .score_ball_label{
+        font-size: 24rpx;
+      }
+    }
+
+    .ti_xian_wrap{
+      position: absolute;
+      right: 0;
+      top: 20%;
+      text-align: center;
+      color: red;
+      border-radius: 90rpx 0 0 90rpx;
+      background-color: #f6d2a3;
+      display: flex;
+      align-items: center;
+      font-size: 28rpx;
+      padding: 10rpx 15rpx;
+      .icon-tixian{
+        line-height: 1;
+        font-size: 36rpx;
+        margin-right:10rpx;
       }
     }
   }
@@ -75,9 +117,9 @@
 
           .day_item {
             margin: auto;
-            width: 70rpx;
-            height: 70rpx;
-            line-height: 70rpx;
+            width: 60rpx;
+            height: 60rpx;
+            line-height: 60rpx;
             text-align: center;
             position: relative;
           }
@@ -95,7 +137,7 @@
           .signed:before {
             content: "";
             position: absolute;
-            bottom: -10rpx;
+            bottom: -16rpx;
             left: 50%;
             transform: translateX(-50%);
             width: 14rpx;
@@ -126,6 +168,73 @@
   .recommend_wrap{
     .split_line{
       width: 100%;
+    }
+  }
+
+  .sign_in_success{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    .banner_image_container{
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      .banner_image{
+        width: 100%;
+      }
+      .get_count_wrap{
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        font-size: 30rpx;
+        color: red;
+        .count_add{
+          padding: 0 10rpx;
+          font-size: 80rpx;
+        }
+      }
+      .remind_text{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 48%;
+        font-size: 32rpx;
+        color: #ffd59c;
+      }
+      .tomorrow_point{
+        top: 40%;
+        text{
+          font-weight: bold;
+          font-size: 40rpx;
+        }
+      }
+      .remind_btn{
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70%;
+        border-radius: 90rpx;
+        background-color: #fece48;
+        text-align: center;
+        padding: 24rpx;
+        font-size: 36rpx;
+        color: #a40023;
+      }
+      .banner_close {
+        text-align: center;
+        color: #fff;
+        .icon{
+          font-size: 54rpx;
+        }
+      }
     }
   }
 }

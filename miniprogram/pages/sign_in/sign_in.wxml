@@ -1,25 +1,21 @@
-<!-- <view class="headers_wrapper" wx:if="{{signtype=='1'}}">
-    <view class="for_headerleft"><image src="../../images/calendar1.png" ></image></view>
-    <view class="for_headerright">
-        <view class="for_headerright_list">今日未签到</view>
-        <view class="for_headerright_list1">已连续签到<span>{{seriesCount}}</span>天 </view>
-        <view class="for_headerright_list2">再连续签到<span>{{series_gos}}</span>天即可获得更多奖励</view>
-    </view>
-</view> -->
-<!-- <view class="headers_wrapper" wx:if="{{signtype=='2'}}">
-    <view class="for_headerleft"><image src="../../images/calendar2.png" ></image></view>
-    <view class="for_headerright">
-        <view class="for_headerright_list">今日已签到</view>
-        <view class="for_headerright_list1">已连续签到<span>{{seriesCount}}</span>天 </view>
-        <view class="for_headerright_list2">再连续签到<span>{{series_gos}}</span>天即可获得更多奖励</view>
-    </view>
-</view> -->
 <view class="sign_container">
   <view class="banner_wrap">
-    <image class="banner_image" src="../../images/qiandaobg.png"></image>
-    <view class="sign_btn_wrap">
+    <image class="banner_image" mode="widthFix" src="../../images/qiandaobg.png"></image>
+    <view class="sign_btn_wrap"  wx:if="{{!todayIsSigned}}" bindtap="handleSignIn">
       <image class="sign_btn_image" mode="widthFix" src="../../images/signedBtn.png"></image>
-      <view class="sign_btn_text">立即签到</view>
+      <view class="sign_btn_text" >立即签到</view>
+    </view>
+    <view class="sign_btn_wrap" wx:else>
+      <image class="sign_btn_image" mode="widthFix" src="../../images/signedBtn.png"></image>
+      <view class="sign_btn_text">邀请好友签到</view>
+    </view>
+    <view class="score_ball">
+      <view class="score_ball_number">{{userInfo?userInfo.point : 0}}</view>
+      <view class="score_ball_label">我的积分</view>
+    </view>
+    <view class="ti_xian_wrap">
+      <text class="icon sh icon-tixian" bindtap="handleTiXian"></text>
+      提现
     </view>
   </view>
   <view class="calendar_wrap">
@@ -55,5 +51,23 @@
   </view>
   <view class="recommend_wrap">
     <image class="split_line" mode="widthFix" src="../../images/recommend.png" alt=""></image>
+  </view>
+
+  <view class="sign_in_success" wx:if="{{showSuccessModal}}">
+    <view class="banner_image_container">
+      <image class="banner_image" mode="widthFix"
+             src="cloud://test-1gpwztoq9c83b6b2.7465-test-1gpwztoq9c83b6b2-1257738802/signInSuccess.png"></image>
+      <view class="get_count_wrap">
+        <text>获得</text>
+        <text class="count_add">{{todayPoint}}</text>
+        <text>积分</text>
+      </view>
+      <view class="remind_text tomorrow_point">明日可获得 <text>{{tomorrowPoint}}</text> 积分</view>
+      <view class="remind_text">提醒我明天也来签到</view>
+      <view class="remind_btn">开启提醒</view>
+      <view class="banner_close">
+        <icon class="icon sh icon-close" bindtap="handleClose"></icon>
+      </view>
+    </view>
   </view>
 </view>

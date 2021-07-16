@@ -25,3 +25,61 @@ page {
   flex-direction: column;
   justify-content: flex-start;
 }
+@font-face {
+    font-family: "sh"; /* Project id 1754238 */
+    src: url('//at.alicdn.com/t/font_1754238_a30u87gox2h.woff2?t=1626396594644') format('woff2'),
+    url('//at.alicdn.com/t/font_1754238_a30u87gox2h.woff?t=1626396594644') format('woff'),
+    url('//at.alicdn.com/t/font_1754238_a30u87gox2h.ttf?t=1626396594644') format('truetype');
+}
+
+.sh {
+    font-family: "sh" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tixian:before {
+    content: "\e604";
+}
+
+.icon-close:before {
+    content: "\e92a";
+}
+
+.icon-arrow-left:before {
+    content: "\e63c";
+}
+
+.icon-is-liked:before {
+    content: "\e603";
+}
+
+.icon-like:before {
+    content: "\e61a";
+}
+
+.icon-share:before {
+    content: "\e619";
+}
+
+.icon-is-favorited:before {
+    content: "\e659";
+}
+
+.icon-arrow-right:before {
+    content: "\e69b";
+}
+
+.icon-cook-list:before {
+    content: "\e600";
+}
+
+.icon-not-favorited:before {
+    content: "\e601";
+}
+
+.icon-rate:before {
+    content: "\e602";
+}
